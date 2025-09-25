@@ -26,6 +26,50 @@ Run following command to check TypeScript is installed:
 
 ---
 
+## 🚀 Project Setup
+
+Follow these steps to set up and run the OpenCart Automation Framework on your local machine:
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/LoveSoni/OPENCART_AUTOMATION.git
+cd OPENCART_AUTOMATION
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Install Playwright Browsers
+```bash
+npx playwright install
+```
+
+### 4. Verify Installation
+```bash
+# Check if all dependencies are installed correctly
+npm list
+
+# Verify TypeScript compilation
+npx tsc --noEmit
+```
+
+### 5. Run Tests
+```bash
+# Run sanity tests (quick verification)
+npm run test:sanity
+
+# Run complete test suite
+npm test
+
+# Generate and open HTML reports
+npm run report:generate
+npm run report:open
+```
+
+---
+
 **Language and Libraries Used**
 * TypeScript -> Modern JavaScript with type safety
 * Playwright -> Cross-browser automation
