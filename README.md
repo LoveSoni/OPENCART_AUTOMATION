@@ -186,16 +186,28 @@ Phone Sanity Test:
 
 **Reporting**
 - **HTML Reports:** Generated in `reports/cucumber-report.html`
+- **Preety Html Reports:** Generated `reports/index.html`
 - **JSON Reports:** Available in `reports/cucumber-report.json`  
 - **Screenshots:** Captured on failure in `screenshots/` directory
 - **Console Logs:** Detailed execution information during test runs
 
 ---
 
-**Best Practices Implemented**
-- Clean separation of concerns with Page Object Model
-- Reusable step definitions across feature files
-- Consistent error handling and timeout management
-- Environment-specific configuration management
-- Comprehensive test data validation
-- Maintainable and scalable test architecture
+**Cucumber Report**
+
+<img width="1533" height="834" alt="Screenshot 2025-09-25 at 4 40 50 pm" src="https://github.com/user-attachments/assets/78e11e39-df31-464a-be2b-aa1bf0f9cde4" />
+
+---
+
+**Preety Html Report**
+
+<img width="1534" height="826" alt="Screenshot 2025-09-25 at 4 42 38 pm" src="https://github.com/user-attachments/assets/051b906e-5172-4298-a93b-77656ef556c3" />
+
+
+---
+
+**Execution Video**
+
+https://github.com/user-attachments/assets/ac977e93-20cd-4353-bcae-6b3cedc7301f
+
+---
