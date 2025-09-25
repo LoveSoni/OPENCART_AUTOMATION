@@ -171,7 +171,6 @@ npm run report:open
 * **BDD Approach:** Gherkin syntax for readable test scenarios
 * **Page Object Model:** Organized and maintainable page objects
 * **Multi-Browser Support:** Cross-browser testing capabilities
-* **Parallel Execution:** Run tests concurrently for faster feedback
 * **HTML Reports:** Comprehensive test execution reports
 * **Screenshot on Failure:** Automatic screenshot capture for failed tests
 * **Test Data Management:** JSON-based test data organization
