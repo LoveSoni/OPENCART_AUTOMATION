@@ -1,0 +1,40 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  sanity-test:
+    runs-on: love-mac-machine
+
+    steps:
+      - run: npm ci
+
+      - run: npx playwright install chromium --with-deps
+
+      - run: npm run test:sanity
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sanity-test-results
+          path: reports/
+          retention-days: 30
+
+  e2e-test:
+    runs-on: love-mac-machine
+
+    steps:
+      - run: npm ci
+
+      - run: npx playwright install chromium --with-deps
+
+      - run: npm test
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: e2e-test-results
+          path: reports/
+          retention-days: 30
+
+permissions:
+  contents: read
