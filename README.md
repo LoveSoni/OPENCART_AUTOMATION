@@ -249,7 +249,7 @@ Phone Sanity Test:
 
 ---
 
-** Coomplete Test Execution Video**
+**Coomplete Test Execution Video**
 
 https://github.com/user-attachments/assets/ac977e93-20cd-4353-bcae-6b3cedc7301f
 
