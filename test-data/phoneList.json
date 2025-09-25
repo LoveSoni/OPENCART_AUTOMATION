@@ -1,0 +1,26 @@
+[
+  {
+    "name": "HTC Touch HD",
+    "price": {
+      "Pound": "£90.51",
+      "Dollar": "$122.00",
+      "Euro": "104.30€"
+    }
+  },
+  {
+    "name": "iPhone",
+    "price": {
+      "Pound": "£91.40",
+      "Dollar": "$123.20",
+      "Euro": "105.33€"
+    }
+  },
+  {
+    "name": "Palm Treo Pro",
+    "price": {
+      "Pound": "£250.75",
+      "Dollar": "$337.99",
+      "Euro": "288.95€"
+    }
+  }
+]

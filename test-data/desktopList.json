@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Apple Cinema 30\"",
+        "price": {
+            "Pound": "£81.61",
+            "Dollar": "$110.00",
+            "Euro": "94.04€"
+        }
+    },
+    {
+        "name": "Canon EOS 5D",
+        "price": {
+            "Pound": "£72.71",
+            "Dollar": "$98.00",
+            "Euro": "83.78€"
+        }
+    },
+    {
+        "name": "HP LP3065",
+        "price": {
+            "Pound": "£90.51",
+            "Dollar": "$122.00",
+            "Euro": "104.30€"
+        }
+    },
+    {
+        "name": "HTC Touch HD",
+        "price": {
+            "Pound": "£90.51",
+            "Dollar": "$122.00",
+            "Euro": "104.30€"
+        }
+    },
+    {
+        "name": "iPhone",
+        "price": {
+            "Pound": "£91.40",
+            "Dollar": "$123.20",
+            "Euro": "105.33€"
+        }
+    },
+    {
+        "name": "iPod Classic",
+        "price": {
+            "Pound": "£90.51",
+            "Dollar": "$122.00",
+            "Euro": "104.30€"
+        }
+    },
+    {
+        "name": "MacBook",
+        "price": {
+            "Pound": "£446.62",
+            "Dollar": "$602.00",
+            "Euro": "514.66€"
+        }
+    },
+    {
+        "name": "MacBook Air",
+        "price": {
+            "Pound": "£446.62",
+            "Dollar": "$602.00",
+            "Euro": "514.66€"
+        }
+    },
+    {
+        "name": "Palm Treo Pro",
+        "price": {
+            "Pound": "£250.75",
+            "Dollar": "$337.99",
+            "Euro": "288.95€"
+        }
+    },
+    {
+        "name": "Product 8",
+        "price": {
+            "Pound": "£90.51",
+            "Dollar": "$122.00",
+            "Euro": "104.30€"
+        }
+    },
+    {
+        "name": "Samsung SyncMaster 941BW",
+        "price": {
+            "Pound": "£179.54",
+            "Dollar": "$242.00",
+            "Euro": "206.89€"
+        }
+    },
+    {
+        "name": "Sony VAIO",
+        "price": {
+            "Pound": "£891.76",
+            "Dollar": "$1,202.00",
+            "Euro": "1,027.61€"
+        }
+    }
+]

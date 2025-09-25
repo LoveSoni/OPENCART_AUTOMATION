@@ -1,0 +1,28 @@
+{
+    "name": "opencart-automation",
+    "version": "1.0.0",
+    "description": "Playwright TypeScript BDD Framework Assignement for OpenCart Automation",
+    "main": "index.js",
+    "scripts": {
+        "test": "cucumber-js",
+        "test:sanity": "cucumber-js --tags '@sanity'",
+        "test:desktop": "cucumber-js --tags '@desktop'",
+        "test:laptop": "cucumber-js --tags '@laptop'",
+        "test:phone": "cucumber-js --tags '@phone'",
+        "test:desktop-sanity": "cucumber-js --tags '@desktop and @sanity'",
+        "test:laptop-sanity": "cucumber-js --tags '@laptop and @sanity'",
+        "test:phone-sanity": "cucumber-js --tags '@phone and @sanity'",
+        "test:comprehensive": "cucumber-js --tags 'not @sanity'"
+    },
+    "keywords": [],
+    "author": "Love",
+    "license": "MIT",
+    "devDependencies": {
+        "@cucumber/cucumber": "^10.0.1",
+        "@cucumber/pretty-formatter": "^1.0.1",
+        "@playwright/test": "^1.40.0",
+        "@types/node": "^20.10.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.3.0"
+    }
+}
