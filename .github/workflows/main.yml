@@ -6,7 +6,7 @@ jobs:
     runs-on: love-mac-machine
 
     steps:
-      - run: npm ci
+      - run: npm install
 
       - run: npx playwright install chromium --with-deps
 
@@ -23,7 +23,7 @@ jobs:
     runs-on: love-mac-machine
 
     steps:
-      - run: npm ci
+      - run: npm install
 
       - run: npx playwright install chromium --with-deps
 
