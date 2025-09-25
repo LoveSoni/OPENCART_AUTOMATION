@@ -6,9 +6,9 @@ jobs:
     runs-on: love-mac-machine
 
     steps:
-      - run: npm install
+      - uses: actions/checkout@v4
 
-      - run: npx playwright install chromium --with-deps
+      - run: npm ci
 
       - run: npm run test:sanity
 
@@ -23,9 +23,9 @@ jobs:
     runs-on: love-mac-machine
 
     steps:
-      - run: npm install
+      - uses: actions/checkout@v4
 
-      - run: npx playwright install chromium --with-deps
+      - run: npm ci
 
       - run: npm test
 
