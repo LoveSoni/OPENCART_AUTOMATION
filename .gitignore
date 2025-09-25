@@ -1,4 +1,11 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Test artifacts
 test-results/
 reports/
 screenshots/
+videos/
+
+# Environment
+.env

@@ -4,15 +4,17 @@
     "description": "Playwright TypeScript BDD Framework Assignement for OpenCart Automation",
     "main": "index.js",
     "scripts": {
-        "test": "cucumber-js",
-        "test:sanity": "cucumber-js --tags '@sanity'",
-        "test:desktop": "cucumber-js --tags '@desktop'",
-        "test:laptop": "cucumber-js --tags '@laptop'",
-        "test:phone": "cucumber-js --tags '@phone'",
-        "test:desktop-sanity": "cucumber-js --tags '@desktop and @sanity'",
-        "test:laptop-sanity": "cucumber-js --tags '@laptop and @sanity'",
-        "test:phone-sanity": "cucumber-js --tags '@phone and @sanity'",
-        "test:comprehensive": "cucumber-js --tags 'not @sanity'"
+        "test": "cucumber-js && npm run report:generate",
+        "test:sanity": "cucumber-js --tags '@sanity' && npm run report:generate",
+        "test:desktop": "cucumber-js --tags '@desktop' && npm run report:generate",
+        "test:laptop": "cucumber-js --tags '@laptop' && npm run report:generate",
+        "test:phone": "cucumber-js --tags '@phone' && npm run report:generate",
+        "test:desktop-sanity": "cucumber-js --tags '@desktop and @sanity' && npm run report:generate",
+        "test:laptop-sanity": "cucumber-js --tags '@laptop and @sanity' && npm run report:generate",
+        "test:phone-sanity": "cucumber-js --tags '@phone and @sanity' && npm run report:generate",
+        "test:comprehensive": "cucumber-js --tags 'not @sanity' && npm run report:generate",
+        "report:generate": "ts-node src/utils/reportGenerator.ts",
+        "report:open": "open reports/index.html"
     },
     "keywords": [],
     "author": "Love",
@@ -22,6 +24,7 @@
         "@cucumber/pretty-formatter": "^1.0.1",
         "@playwright/test": "^1.40.0",
         "@types/node": "^20.10.0",
+        "multiple-cucumber-html-reporter": "^3.9.3",
         "ts-node": "^10.9.1",
         "typescript": "^5.3.0"
     }

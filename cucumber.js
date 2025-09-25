@@ -1,7 +1,11 @@
 module.exports = {
   default: {
     requireModule: ['ts-node/register'],
-    require: ['src/**/*.ts'],
+    require: [
+      'src/hooks/**/*.ts',
+      'src/steps/**/*.ts',
+      'src/world/**/*.ts'
+    ],
     format: [
       'json:reports/cucumber-report.json',
       'html:reports/cucumber-report.html',
