@@ -252,7 +252,11 @@ Phone Sanity Test:
 **Complete Test Execution Recording**
 **Chromium**
 
-https://github.com/user-attachments/assets/56dd056d-e0ec-45ea-ab7b-2460c039beae
+
+
+https://github.com/user-attachments/assets/bc61d31b-0eff-4718-b11c-cdf12992aa49
+
+
 
 
 **Webkit**
