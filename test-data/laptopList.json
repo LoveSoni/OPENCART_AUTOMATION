@@ -3,40 +3,40 @@
         "name": "HP LP3065",
         "price": {
             "Dollar": "$122.00",
-            "Euro": "104.30€",
-            "Pound": "£90.51"
+            "Euro": "95.72€",
+            "Pound": "£74.73"
         }
     },
     {
         "name": "MacBook",
         "price": {
             "Dollar": "$602.00",
-            "Euro": "514.66€",
-            "Pound": "£446.62"
+            "Euro": "472.33€",
+            "Pound": "£368.73"
         }
     },
     {
         "name": "MacBook Air",
         "price": {
             "Dollar": "$602.00",
-            "Euro": "514.66€",
-            "Pound": "£446.62"
+            "Euro": "472.33€",
+            "Pound": "£368.73"
         }
     },
     {
         "name": "MacBook Pro",
         "price": {
             "Dollar": "$602.00",
-            "Euro": "514.66€",
-            "Pound": "£446.62"
+            "Euro": "472.33€",
+            "Pound": "£368.73"
         }
     },
     {
         "name": "Sony VAIO",
         "price": {
             "Dollar": "$1,202.00",
-            "Euro": "1,027.61€",
-            "Pound": "£891.76"
+            "Euro": "943.09€",
+            "Pound": "£736.23"
         }
     }
 ]

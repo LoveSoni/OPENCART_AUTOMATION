@@ -21,7 +21,9 @@ module.exports = {
     worldParameters: {
       browser: process.env.BROWSER || 'chromium',
       headless: process.env.HEADLESS !== 'false',
-      baseUrl: process.env.BASE_URL || 'https://demo.opencart.com'
+      baseUrl: process.env.BASE_URL || 'https://opencart.abstracta.us' // 'https://demo.opencart.com' // because the official demo site (https://demo.opencart.com) is intermittently
+      // blocked by CloudFront with access/403 errors during automated testing.
+      // Functionality remains the same as both are official OpenCart demo instances.
     }
   }
 };

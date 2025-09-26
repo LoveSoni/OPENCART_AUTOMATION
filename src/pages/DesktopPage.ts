@@ -184,14 +184,27 @@ export class DesktopPage extends BasePage {
   }
 
   async getAllProductNamesFromAllPages(): Promise<string[]> {
-    const allProductNames: string[] = [];
-    let currentPageNum = 1;
-
     try {
+      console.log('Extracting desktop product names...');
+      const hasPagination = await this.hasPagination();
+      
+      if (!hasPagination) {
+        console.log('Single desktop page detected, extracting all products...');
+        const names = await this.getAllProductNames();
+        console.log(`Found ${names.length} desktop product names across all pages:`, names);
+        return names;
+      }
+      
+      // Multiple pages logic
+      const allProductNames: string[] = [];
+      let currentPageNum = 1;
+
       do {
+        console.log(`Processing desktop names on page ${currentPageNum}...`);
         const pageProductNames = await this.getAllProductNames();
         allProductNames.push(...pageProductNames);
         console.log(`Found ${pageProductNames.length} products on page ${currentPageNum}`);
+        
         const hasNext = await this.goToNextPage();
         if (!hasNext) {
           console.log('Reached last page or no pagination found');
@@ -200,50 +213,60 @@ export class DesktopPage extends BasePage {
         currentPageNum++;
 
         if (currentPageNum > 10) {
-          console.log('Reached maximum page limit ');
+          console.log('Reached maximum page limit');
           break;
         }
       } while (true);
 
-      console.log(`Total products found across all pages: ${allProductNames.length}`);
-      return [...new Set(allProductNames)];
+      console.log(`Total desktop products found across all pages: ${allProductNames.length}`);
+      return [...new Set(allProductNames)]; 
     } catch (error) {
-      console.error('Error getting products from all pages:', error);
-      return allProductNames;
+      console.error('Error getting desktop products from all pages:', error);
+      // Fallback to single page
+      return await this.getAllProductNames();
     }
   }
 
   async getAllProductPricesFromAllPages(): Promise<{ name: string; price: string; originalPrice?: string }[]> {
-    const allProductPrices: { name: string; price: string; originalPrice?: string }[] = [];
-    let currentPageNum = 1;
-
     try {
-      console.log('Starting to extract product prices from all pages...');
+      console.log('Starting to extract desktop product prices...');
+      const hasPagination = await this.hasPagination();
+      
+      if (!hasPagination) {
+        console.log('Single desktop page detected, extracting all product prices...');
+        const prices = await this.getAllProductPrices();
+        console.log(`Total desktop products with prices found: ${prices.length}`);
+        return prices;
+      }
+      const allProductPrices: { name: string; price: string; originalPrice?: string }[] = [];
+      let currentPageNum = 1;
 
       do {
-        console.log(`Processing prices on page ${currentPageNum}...`);
+        console.log(`Processing desktop prices on page ${currentPageNum}...`);
         
-        // Get product prices from current page
         const pageProductPrices = await this.getAllProductPrices();
         allProductPrices.push(...pageProductPrices);
         console.log(`Found ${pageProductPrices.length} products with prices on page ${currentPageNum}`);
+        
         const hasNext = await this.goToNextPage();
         if (!hasNext) {
           console.log('Reached last page or no pagination found');
           break;
         }
         currentPageNum++;
+        
         if (currentPageNum > 10) {
-          console.log('Reached maximum page limit ');
+          console.log('Reached maximum page limit');
           break;
         }
       } while (true);
 
-      console.log(`Total products with prices found across all pages: ${allProductPrices.length}`);
-      return allProductPrices; 
-    } catch (error) {
-      console.error('Error getting product prices from all pages:', error);
+      console.log(`Total desktop products with prices found across all pages: ${allProductPrices.length}`);
       return allProductPrices;
+    } catch (error) {
+      console.error('Error getting desktop product prices from all pages:', error);
+      // Fallback to single page
+      return await this.getAllProductPrices();
     }
   }
 }

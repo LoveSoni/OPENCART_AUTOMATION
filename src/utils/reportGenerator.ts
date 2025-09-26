@@ -3,9 +3,6 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 export class EnhancedReportGenerator {
-  /**
-   * Generate enhanced HTML report with custom styling and metadata
-   */
   static generateHTMLReport(): void {
     const reportPath = path.join(process.cwd(), 'reports');
     const jsonReportPath = path.join(reportPath, 'cucumber-report.json');
@@ -21,7 +18,6 @@ export class EnhancedReportGenerator {
       fs.mkdirSync(reportPath, { recursive: true });
     }
 
-    // Generate the enhanced report
     report.generate({
       jsonDir: reportPath,
       reportPath: reportPath,
@@ -47,27 +43,64 @@ export class EnhancedReportGenerator {
         title: 'Test Execution Info',
         data: [
           { label: 'Project', value: 'OpenCart E-commerce Automation' },
-          { label: 'Test Environment', value: process.env.BASE_URL || 'https://demo.opencart.com' },
+          { label: 'Test Type', value: this.getTestType() },
+          { label: 'Application Url', value: process.env.BASE_URL || 'https://demo.opencart.com' },
           { label: 'Execution Date', value: new Date().toLocaleString() },
           { label: 'Framework', value: 'Playwright + Cucumber + TypeScript' },
-          { label: 'Test Categories', value: 'Desktop, Laptop, Phone Products' }
+          { label: 'Scenarios Covered', value: 'Desktop, Laptop, Phone Products' }
         ]
       },
       
       pageFooter: this.getPageFooter()
     });
 
-    console.log('🎨 Enhanced HTML report generated successfully!');
-    console.log(`📊 Report location: ${path.join(reportPath, 'index.html')}`);
-    
-    // Create additional CSS file for enhanced styling
+    console.log('Enhanced HTML report generated successfully!');
+    console.log(`Report location: ${path.join(reportPath, 'index.html')}`);
     this.createCustomCSS(reportPath);
   }
-  
-  /**
-   * Create custom CSS file for additional styling
-   * @param reportPath - Path to the reports directory
-   */
+
+  private static getTestType(): string {
+    try {
+      const reportPath = path.join(process.cwd(), 'reports');
+      const jsonReportPath = path.join(reportPath, 'cucumber-report.json');
+      
+      if (!fs.existsSync(jsonReportPath)) {
+        return 'End-to-End Tests';
+      }
+      
+      const reportData = JSON.parse(fs.readFileSync(jsonReportPath, 'utf8'));
+      const scenarios: string[] = [];
+      const tags: string[] = [];
+      
+      reportData.forEach((feature: any) => {
+        feature.elements?.forEach((scenario: any) => {
+          scenarios.push(scenario.name?.toLowerCase() || '');
+          scenario.tags?.forEach((tag: any) => {
+            tags.push(tag.name?.toLowerCase() || '');
+          });
+        });
+      });
+      
+      const allScenarios = scenarios.join(' ');
+      const allTags = tags.join(' ');
+
+      console.log('All scenarios are:,',allScenarios)
+      console.log('All tags are:',allTags)
+    
+      console.log('final output',allTags.includes('@sanity') || allScenarios.includes('sanity'));
+      if (allTags.includes('@sanity') || allScenarios.includes('sanity')) {
+        return 'Sanity Tests';
+      }
+      
+      return 'End-to-End Tests';
+      
+    } catch (error) {
+      console.warn('error finding test type:', error);
+      return 'End-to-End Tests';
+    }
+  }
+
+
   private static createCustomCSS(reportPath: string): void {
     const cssContent = this.getCustomCSSContent();
     const cssPath = path.join(reportPath, 'custom-styles.css');
@@ -76,14 +109,11 @@ export class EnhancedReportGenerator {
     console.log('✨ Custom CSS styles created');
   }
 
-  /**
-   * Get the page footer HTML content
-   * @returns HTML string for page footer
-   */
+ 
   private static getPageFooter(): string {
     return `
       <div style="text-align: center; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; margin-top: 30px;">
-        <h4>🛍️ OpenCart Automation Framework</h4>
+        <h4>OpenCart Automation Framework</h4>
         <p style="margin: 10px 0;">
           <strong>Generated:</strong> ${new Date().toLocaleString()} <br>
           <strong>Framework:</strong> Playwright + Cucumber + TypeScript <br>
@@ -98,10 +128,6 @@ export class EnhancedReportGenerator {
     `;
   }
 
-  /**
-   * Get custom CSS content for enhanced styling
-   * @returns CSS string
-   */
   private static getCustomCSSContent(): string {
     return `
 /* OpenCart Automation Custom Styles */
@@ -184,7 +210,6 @@ export class EnhancedReportGenerator {
   }
 }
 
-// Auto-generate report if this file is run directly
 if (require.main === module) {
   EnhancedReportGenerator.generateHTMLReport();
 }

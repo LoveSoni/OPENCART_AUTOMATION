@@ -2,97 +2,97 @@
     {
         "name": "Apple Cinema 30\"",
         "price": {
-            "Pound": "£81.61",
+            "Pound": "£67.38",
             "Dollar": "$110.00",
-            "Euro": "94.04€"
+            "Euro": "86.32€"
         }
     },
     {
         "name": "Canon EOS 5D",
         "price": {
-            "Pound": "£72.71",
+            "Pound": "£60.03",
             "Dollar": "$98.00",
-            "Euro": "83.78€"
+            "Euro": "76.92€"
         }
     },
     {
         "name": "HP LP3065",
         "price": {
-            "Pound": "£90.51",
+            "Pound": "£74.73",
             "Dollar": "$122.00",
-            "Euro": "104.30€"
+            "Euro": "95.72€"
         }
     },
     {
         "name": "HTC Touch HD",
         "price": {
-            "Pound": "£90.51",
+            "Pound": "£74.73",
             "Dollar": "$122.00",
-            "Euro": "104.30€"
+            "Euro": "95.72€"
         }
     },
     {
         "name": "iPhone",
         "price": {
-            "Pound": "£91.40",
+            "Pound": "£75.46",
             "Dollar": "$123.20",
-            "Euro": "105.33€"
+            "Euro": "96.66€"
         }
     },
     {
         "name": "iPod Classic",
         "price": {
-            "Pound": "£90.51",
+            "Pound": "£74.73",
             "Dollar": "$122.00",
-            "Euro": "104.30€"
+            "Euro": "95.72€"
         }
     },
     {
         "name": "MacBook",
         "price": {
-            "Pound": "£446.62",
+            "Pound": "£368.73",
             "Dollar": "$602.00",
-            "Euro": "514.66€"
+            "Euro": "472.33€"
         }
     },
     {
         "name": "MacBook Air",
         "price": {
-            "Pound": "£446.62",
+            "Pound": "£368.73",
             "Dollar": "$602.00",
-            "Euro": "514.66€"
+            "Euro": "472.33€"
         }
     },
     {
         "name": "Palm Treo Pro",
         "price": {
-            "Pound": "£250.75",
+            "Pound": "£207.02",
             "Dollar": "$337.99",
-            "Euro": "288.95€"
+            "Euro": "265.19€"
         }
     },
     {
         "name": "Product 8",
         "price": {
-            "Pound": "£90.51",
+            "Pound": "£74.73",
             "Dollar": "$122.00",
-            "Euro": "104.30€"
+            "Euro": "95.72€"
         }
     },
     {
         "name": "Samsung SyncMaster 941BW",
         "price": {
-            "Pound": "£179.54",
+            "Pound": "£148.23",
             "Dollar": "$242.00",
-            "Euro": "206.89€"
+            "Euro": "189.92€"
         }
     },
     {
         "name": "Sony VAIO",
         "price": {
-            "Pound": "£891.76",
+            "Pound": "£736.23",
             "Dollar": "$1,202.00",
-            "Euro": "1,027.61€"
+            "Euro": "943.09€"
         }
     }
 ]
