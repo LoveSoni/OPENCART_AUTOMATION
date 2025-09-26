@@ -223,7 +223,7 @@ Phone Sanity Test:
 2. **Sanity Tests:** Quick validation of product visibility and counts
 3. **Price Validation:** Comprehensive price verification across multiple currencies (USD, EUR, GBP)
 4. **Product Names:** Validation against predefined test data
-5. **Multi-page Support:** Handles pagination for complete product coverage
+5. **Multi-browser Support:** Supported cross browser execution on chromium, firefox and Webkit
 
 ---
 
