@@ -242,7 +242,7 @@ Phone Sanity Test:
 
 ---
 
-**Pretty Html Report**
+**Html Report**
 
 <img width="1534" height="826" alt="Screenshot 2025-09-25 at 4 42 38 pm" src="https://github.com/user-attachments/assets/051b906e-5172-4298-a93b-77656ef556c3" />
 
